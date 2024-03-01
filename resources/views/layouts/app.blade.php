@@ -58,7 +58,7 @@
                     <li class="nav-item dropdown">
                         <div class="dropdown">
                           <button  type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Views
+                            Views 
                           </button>
                           <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="">Marketing 2023</a></li>
