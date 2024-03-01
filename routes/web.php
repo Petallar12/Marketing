@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\Marketing;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Marketing_2024Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +23,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+// Route::get("/2024/marketing/index", [Marketing_2024Controller::class, 'index'])->name('marketing.index')->middleware('auth');
+
+Route::get("/2024/marketing/index", [Marketing_2024Controller::class, 'index'])->name('marketing.index')->middleware('auth');
+
+
