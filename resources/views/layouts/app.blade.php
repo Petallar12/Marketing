@@ -57,12 +57,12 @@
 
                     <li class="nav-item dropdown">
                         <div class="dropdown">
-                          <button class="btn dropdown-toggle text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <button  type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Views
                           </button>
                           <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="">Marketing 2023</a></li>
-                            <li><a class="dropdown-item" href="marketing.index">Marketing 2024</a></li>
+                            <li><a class="dropdown-item" href="2024/marketing/index">Marketing 2024</a></li>
                           </ul>
                         </div>
                       </li>
