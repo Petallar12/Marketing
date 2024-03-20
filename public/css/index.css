@@ -1,0 +1,125 @@
+  
+  body{
+    background-color:rgb(210, 213, 213) ;
+    font-family: 'Roboto', sans-serif;
+
+  }
+  table {
+    font-size: 13px;
+    text-align:center;
+    background-color: white;
+}
+/* th {
+    font-size: 13.5px;
+  
+} */
+
+  .btnColor {
+      /* Add styles for the search text box */
+      width: 0 auto;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      margin-right:3px;
+      padding: 5px 10px 5px 10px;
+      outline: none;
+      background-color: rgb(10, 96, 194);
+      transition: 0.5s;
+      background-size: 200% auto;
+      
+      }
+
+      .btnColor:hover {
+          background-color: rgb(65, 166, 242);
+      }
+select {
+          text-align: center;
+          padding: 7px;
+          border-radius: 10px;
+          background-color: #f2f2f2;
+          /* border: 1px solid #ccc; */
+          width: 140px;
+          font-weight: bold;             
+      }
+
+.search {
+    text-align: right;
+    margin-left: 10px;
+}
+.containerTable {
+      background-color: rgb(255, 255, 255, .5);
+      width: 97%;
+      border-radius: 10px;
+      justify-content: center;
+      margin: 0 auto;
+      padding:10px;
+    }
+
+    .tableHeader {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+    }
+    
+
+    h1 {
+      /* color: black; */
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .dataTables_filter {
+    /* Add styles for the search input */
+    font-weight: 500;
+    padding: 0 20px 15px 0;
+    
+    }
+
+    #table_filter input[type="search"] {
+    /* Add styles for the search text box */
+    font-weight: 500;
+    width: 70%;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    background: rgba(255,255,255, .5);
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    }
+
+    #table_length select {
+    /* Add styles for the "Show X entries" dropdown */
+    font-weight: 500;
+    width: 36%;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    background: rgba(255,255,255, .5);
+    padding: 5px 5px 5px 5px;
+    outline: none;
+  }
+    
+    .dataTables_length {
+    /* Add styles for the whole part of "Show X entries" */
+    font-weight: 500;
+    padding: 0 0 15px 20px;
+    
+    } 
+
+    .dataTables_paginate {
+    /* Add styles for the pagination controls */
+    font-weight: 500;
+    }
+
+    .dataTables_info {
+    /* Add styles for the "Showing X to Y of Z entries" text */
+    font-weight: 500;
+    padding: 0 0 0 20px;
+    }
+    @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 

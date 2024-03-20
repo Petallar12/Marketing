@@ -27,7 +27,25 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 // Route::get("/2024/marketing/index", [Marketing_2024Controller::class, 'index'])->name('marketing.index')->middleware('auth');
-
+Route::get("/2024/marketing/create",[Marketing_2024Controller::class, 'create'])->middleware('auth');
+Route::post("/2024/marketing",[Marketing_2024Controller::class, 'store'])->middleware('auth');
 Route::get("/2024/marketing/index", [Marketing_2024Controller::class, 'index'])->name('marketing.index')->middleware('auth');
 
 
+//Use Post in javascript and not delete because AJax is  block in our server 
+Route::post("/2024/marketing/delete/{id}",[Marketing_2024Controller::class, 'destroy'])->middleware('auth');
+Route::get("/2024/marketing/{id}",[Marketing_2024Controller::class, 'show'])->middleware('auth');
+
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
