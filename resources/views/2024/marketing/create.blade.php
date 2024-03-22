@@ -1,8 +1,16 @@
 @extends('layouts.app')
 @section('content')
 {{-- <link  rel="stylesheet" href="{{ asset('css/create.css') }}"> --}}
+<style>
 
-
+</style>
+<div class="container-fluid mt-2 px-4 text-white" style="    background-color: rgb(255, 255, 255, .5);
+width: 97%;
+border-radius: 10px;
+justify-content: center;
+margin: 0 auto;
+padding:10px;
+box-shadow: 5px 10px  30px #888888;">
 <div class="card">
     <div class="button">
 
@@ -15,7 +23,7 @@
         
         <div class="form-group mb-3">
             <label for="date">Date:</label>
-            <input type="text" id="date" name="date" class="form-control" required>
+            <input type="date" id="date" name="date" class="form-control" required>
         </div>
         
         <div class="form-group mb-3">

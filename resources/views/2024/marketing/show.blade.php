@@ -3,6 +3,8 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container-fluid px-4 text-white">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +15,11 @@
     <link  rel="stylesheet" href="{{ asset('css/index.css') }}">
 
 </head>
+<style>
 
+</style>
 <body>
-<div class="container mt-5">
+<div class="container mt-2">
     <div class="card detail-card">
         <div class="card-header">
             <h2>Detail View - {{ $marketing_2024->name }}</h2>

@@ -1,6 +1,5 @@
 
-@extends('layouts.app
-')
+@extends('layouts.app')
 @section('content')
 <html>
     <title>Index</title>
@@ -9,8 +8,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>  --}}
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script> 
         <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
         <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
         <style>
@@ -22,16 +21,9 @@
 
     <body>
       
-  <div class="text">
-    {{-- Title --}}
-
-        <center><h1>Marketing 2024</h1></center>
-
-    </div>
-    <br>
 <div class="containerTable">
 
-    
+    <h1>Marketing 2024</h1>
     <table id="table" class="display nowrap" style="width:100%">
         <thead>
             <tr>
@@ -226,9 +218,9 @@
                     {
                       data: null,
                       render: function (data, type, row) {
-                          return '<a href="' + "{{ url('/2024/marketing/') }}/" + row.id + '/" title="Show Client"><button class="btnColor">Show</button></a>' +
-                          '<a href="' + "{{ url('/2024/marketing/') }}/" + row.id + '/edit" title="Edit Client"><button class="btnColor">Edit</button></a>' +
-                          '<button class="btnColor delete-btn" data-id="' + row.id + '" title="Delete Client">Delete </button>';                                                     
+                          return '<a href="' + "{{ url('/2024/marketing/') }}/" + row.id + '/" title="Show Client"><button class="btnColor"><i class="fa fa-eye" aria-hidden="true"></i> </button></a>' +
+                          '<a href="' + "{{ url('/2024/marketing/') }}/" + row.id + '/edit" title="Edit Client"><button class="btnColor"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a>' +
+                          '<button class="btnColor delete-btn" data-id="' + row.id + '" title="Delete Client"><i class="fa fa-trash-o" aria-hidden="true"></i>  </button>';                                                     
                       }
                     },
                     {data: 'date', name: 'date'},

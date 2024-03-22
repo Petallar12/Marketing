@@ -1,0 +1,142 @@
+body{
+    body, button, input, textarea {
+    font-family: 'Roboto', sans-serif !important;
+}}
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff; /* Adjust the color as needed */
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px; /* Adjust the space between the circle and the name */
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 200px; /* Match this to your sidebar width if it's different */
+    background: rgba(0,0,0,0.1); /* Optional: for contrast */
+}
+
+.nav-link.dropdown-toggle {
+    padding-left: 0; /* Removes padding to bring text closer */
+    color: #333;
+    text-decoration: none; /* Removes underline */
+    background: none; /* Removes any background styling */
+}
+.navbar{
+    /* outline: 2px solid rgba(255, 255, 255, 0.9);  */
+     margin: 8px 30px 0px 25px; /* top,right,bottom,left  */
+    border-radius:10px;
+    width:97%;
+    background-color:#3942cf;
+    box-shadow: 5px 10px  40px #888888;
+    padding:2rem;
+    
+}
+    .active > a {
+        font-weight: bold;
+        color: #007bff;
+    }
+    .navbar h1 {
+    color: white;
+    }    
+    b {
+    color: white;
+}
+    h1{
+        color:white;
+    }
+
+.sidebar {
+    position: fixed;
+    top: 20px; /* Top margin */
+    bottom: 20px; /* Bottom margin */
+    left: 20px; /* Left margin */
+    width: 250px; /* Sidebar width */
+    background-color: #3942cf; /* Background color */
+    overflow-y: auto; /* Scrollable content */
+    transition: 0.5s; /* Smooth transition for opening and closing */
+    padding-top: 20px; /* Padding at the top inside the sidebar */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 5px 10px  40px #888888;/* Shadow for 3D effect */
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.sidebar a:hover {
+    color: #f1f1f1; /* Text color on hover */
+    background-color: #575fcf; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #3942cf;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+h3{
+    color:#FFFFFF;
+    text-align:center;
+        margin-right:12px;
+
+
+}
+.fa{
+    margin-right:12px;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+/* body{
+    background-color:red;
+} */
+
+.container {
+    background-color: rgb(255, 255, 255, .5);
+    width: 97%;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    padding:10px;
+    box-shadow: 5px 10px  40px #888888;
+
+  }
+

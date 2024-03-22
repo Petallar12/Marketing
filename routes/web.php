@@ -4,6 +4,8 @@ use App\Models\Marketing;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Marketing_2024Controller;
+use App\Http\Controllers\Dashboard_2024Controller;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,8 @@ Route::post("/2024/marketing/delete/{id}",[Marketing_2024Controller::class, 'des
 Route::get("/2024/marketing/{id}",[Marketing_2024Controller::class, 'show'])->middleware('auth');
 
 
+//Dashboard
+Route::get("/2024/dashboard", [Dashboard_2024Controller::class, 'users'])->middleware('auth');
 
 
 

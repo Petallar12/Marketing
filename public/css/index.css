@@ -1,11 +1,6 @@
-  
-  body{
-    background-color:rgb(210, 213, 213) ;
-    font-family: 'Roboto', sans-serif;
 
-  }
   table {
-    font-size: 13px;
+    font-size: 14px;
     text-align:center;
     background-color: white;
 }
@@ -28,11 +23,19 @@
       background-size: 200% auto;
       
       }
-
+      /* make this to spin button */
+/* 
+      .btnColor{
+        animation:rotate 2s infinite;
+      }
+      @keyframes rotate{
+        0% { transform:rotate(0deg);}
+        100% {transform: rotate(300deg);}
+      } */
       .btnColor:hover {
           background-color: rgb(65, 166, 242);
       }
-select {
+  select {
           text-align: center;
           padding: 7px;
           border-radius: 10px;
@@ -41,11 +44,11 @@ select {
           width: 140px;
           font-weight: bold;             
       }
-
-.search {
-    text-align: right;
-    margin-left: 10px;
-}
+      
+    .search {
+        text-align: right;
+        margin-left: 10px;
+    }
 .containerTable {
       background-color: rgb(255, 255, 255, .5);
       width: 97%;
@@ -53,6 +56,8 @@ select {
       justify-content: center;
       margin: 0 auto;
       padding:10px;
+      box-shadow: 5px 10px  40px #888888;
+
     }
 
     .tableHeader {
@@ -60,10 +65,20 @@ select {
       justify-content: flex-end;
       padding: 10px;
     }
+    .dataTables_filter input {
+      background-color: #eceaea !important; /* Light grey background search bar*/
+      color: black !important; /* Text color */
+    }
+    
+    .dataTables_length select {
+      background-color: #eceaea !important; /* Light grey background pagination*/
+      color: black !important; /* Text color */
+    }
     
 
+
     h1 {
-      /* color: black; */
+      color: black;
       font-family: 'Roboto', sans-serif;
     }
 
