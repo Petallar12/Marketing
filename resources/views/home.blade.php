@@ -10,24 +10,24 @@
     <title>Document</title>
 </head>
 <style>
-body, html {
-    height: 100%; /* Make sure the html and body are covering the whole page */
-    margin: 0; /* Reset default margin */
-    background: url('/assets/images/img.jpg') no-repeat center center fixed; 
+/* body, html {
+    height: 100%;
+    margin: 0;
+    background: url('/assets/images/background.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
+} */
 
 </style>
 <body>
-   
+{{--    
 <div class="container">
     <div class="row justify-content-center">
         
     </div>
-</div>
+</div> --}}
  
 </body>
 </html>

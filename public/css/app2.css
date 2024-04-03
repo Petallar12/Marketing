@@ -24,10 +24,8 @@
     
     <div id="mySidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    @endauth
-        <a href="{{ url('/home') }}"><img src="/assets/images/Digital.png" class="logo"></a>
-@auth
-
+            <h3>
+                General</h3>
             <hr>
             <a href="/home"><i class="fa fa-home" aria-hidden="true"></i>
                  Home</a>
@@ -54,7 +52,7 @@
 
       <!-- Navbar -->
 @auth
-<nav class="navbar navbar-expand-md" style="padding-top: 32px; padding-bottom: 32px;">
+<nav class="navbar navbar-expand-md" style="padding-top: 2rem; padding-bottom: 2rem;">
     <div class="container-fluid "> <!-- Use container-fluid to ensure full width -->
         <!-- Hamburger button on the left -->
         <button class="openbtn"style="font-size:20px;  font-weight: bold;" onclick="openNav()">☰</button>

@@ -2,7 +2,7 @@
   table {
     font-size: 14px;
     text-align:center;
-    background-color: white;
+ 
 }
 /* th {
     font-size: 13.5px;
@@ -18,7 +18,7 @@
       margin-right:3px;
       padding: 5px 10px 5px 10px;
       outline: none;
-      background-color: rgb(10, 96, 194);
+      background-color: #3942cf;
       transition: 0.5s;
       background-size: 200% auto;
       
@@ -73,13 +73,6 @@
     .dataTables_length select {
       background-color: #eceaea !important; /* Light grey background pagination*/
       color: black !important; /* Text color */
-    }
-    
-
-
-    h1 {
-      color: black;
-      font-family: 'Roboto', sans-serif;
     }
 
     .dataTables_filter {

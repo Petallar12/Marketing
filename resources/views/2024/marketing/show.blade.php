@@ -19,7 +19,7 @@
 
 </style>
 <body>
-<div class="container mt-2">
+
     <div class="card detail-card">
         <div class="card-header">
             <h2>Detail View - {{ $marketing_2024->name }}</h2>

@@ -21,7 +21,7 @@
         </div>
 
 
-        <div class="col-xl-4 col-md-4">
+        <div class="col-xl-4 col-md4-">
             <div class="card mb-2 ">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title mb-0">1</h5>
