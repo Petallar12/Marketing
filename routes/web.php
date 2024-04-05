@@ -3,9 +3,9 @@
 use App\Models\Marketing;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Marketing_2024Controller;
+use App\Http\Controllers\Graph2024Controller;
 use App\Http\Controllers\Dashboard_2024Controller;
-
+use App\Http\Controllers\Marketing_2024Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +43,13 @@ Route::get("/2024/marketing/{id}",[Marketing_2024Controller::class, 'show'])->mi
 Route::get("/2024/dashboard", [Dashboard_2024Controller::class, 'users'])->middleware('auth');
 
 
+// Graphs
+Route::get("/2024/dashboard/lead_distribution", [Graph2024Controller::class,'lead_distribution'])->middleware('auth');
+Route::get("/2024/dashboard/lead_based_headcount", [Graph2024Controller::class,'lead_based_headcount'])->middleware('auth');
+Route::get("/2024/dashboard/website_leads_based_headcount", [Graph2024Controller::class,'website_leads_based_headcount'])->middleware('auth');
+Route::get("/2024/dashboard/contributing_website", [Graph2024Controller::class,'contributing_website'])->middleware('auth');
+Route::get("/2024/dashboard/age", [Graph2024Controller::class,'age'])->middleware('auth');
+Route::get("/2024/dashboard/monthly_lead_count", [Graph2024Controller::class,'monthly_lead_count'])->middleware('auth');
 
 
 
@@ -50,6 +57,3 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
