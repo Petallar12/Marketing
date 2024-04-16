@@ -19,21 +19,6 @@
         color: white;
         background-color: rgb(255, 255, 255, .3);
     }
-/* CSS for the blur effect */
-.blur-effect {
-    filter: blur(5px); /* Adjust the blur intensity as needed */
-    transition: filter 0.3s ease; /* Smooth transition effect */
-}
-
-.card:hover {
-    transform: scale(1.3);
-    /* background: #ff800a; */
-    z-index: 2;
-    box-shadow: 2px 2px 2px #000;
-    filter: none; /* Remove blur when hovering */
-    margin-left:150px;
-}
-
 
     strong {
         font-size: 25px;
@@ -63,10 +48,10 @@
 
 
 
-    {{-- Data --}}
+    <!-- ROW FOR CANCELLATION BUFFER CARDS -->
     <header class="row">
         
-        <div class="col-xl-4 col-md-4">
+        <div class="col-xl-2 col-md-2">
             <div class="card mb-4" style="background-color: rgb(255, 255, 255, .3)">
                 <div class="card-header">
                     <h5 class="card-title">Total Leads</h5>
@@ -143,7 +128,7 @@
             <!-- TOTAL Premium and Commission per Insurer -->
             <div class="card mb-4" style="background-color: rgb(255, 255, 255, .3)">
                 <div class="card-body" style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: black;">Lead Base on Ad and Organic 2024</h3>
+                    <h3 class="card-title" style="color: white;">Total Premium and Commission per Insurer 2024</h3>
                 </div>
                 <div class="card-footer d-flex">
                     <iframe src="/2024/dashboard/lead_distribution" frameborder="1"></iframe>
@@ -155,7 +140,7 @@
             <!-- TOTAL Premium and Commission per Insurer -->
             <div class="card mb-4" style="background-color: rgb(255, 255, 255, .3)">
                 <div class="card-body" style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: black;">Lead Base on Headcount 2024</h3>
+                    <h3 class="card-title" style="color: white;">Total Premium and Commission per Insurer 2024</h3>
                 </div>
                 <div class="card-footer d-flex">
                     <iframe src="/2024/dashboard/lead_based_headcount" frameborder="1"></iframe>
@@ -167,7 +152,7 @@
             <!-- TOTAL Premium and Commission per Insurer -->
             <div class="card mb-4" style="background-color: rgb(255, 255, 255, .3)">
                 <div class="card-body" style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: black;">Websites Based on Headcount</h3>
+                    <h3 class="card-title" style="color: white;">Total Premium and Commission per Insurer 2024</h3>
                 </div>
                 <div class="card-footer d-flex">
                     <iframe src="/2024/dashboard/website_leads_based_headcount" frameborder="1"></iframe>
@@ -179,7 +164,7 @@
             <!-- TOTAL Premium and Commission per Insurer -->
             <div class="card mb-4" style="background-color: rgb(255, 255, 255, .3)">
                 <div class="card-body" style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: black;">Contributing Website or Platform</h3>
+                    <h3 class="card-title" style="color: white;">Contributing Website or Platform</h3>
                 </div>
                 <div class="card-footer d-flex">
                     <iframe src="/2024/dashboard/contributing_website" frameborder="1"></iframe>
@@ -191,7 +176,7 @@
             <!-- TOTAL Premium and Commission per Insurer -->
             <div class="card mb-4" style="background-color: rgb(255, 255, 255, .3)">
                 <div class="card-body" style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: black;">Monthly Lead Count</h3>
+                    <h3 class="card-title" style="color: white;">Monthly Lead Count</h3>
                 </div>
                 <div class="card-footer d-flex">
                     <iframe src="/2024/dashboard/monthly_lead_count" frameborder="1"></iframe>
@@ -203,7 +188,7 @@
             <!-- TOTAL Premium and Commission per Insurer -->
             <div class="card mb-4" style="background-color: rgb(255, 255, 255, .3)">
                 <div class="card-body" style="display: flex; justify-content: space-between;">
-                    <h3 class="card-title" style="color: black;">Age Population</h3>
+                    <h3 class="card-title" style="color: white;">Age Population</h3>
                 </div>
                 <div class="card-footer d-flex">
                     <iframe src="/2024/dashboard/age" frameborder="1"></iframe>
@@ -295,7 +280,7 @@
         
     </header>
 
-    <div class="container-fluid px-4 text-black">
+    <div class="container-fluid px-4 text-white">
     <div class="row mt-3">
         <div class="col-12 h-200"> <!-- Use col-12 to span the full width -->
             <div class="card">
@@ -310,25 +295,5 @@
     </div>
 
 </div>
-<!-- Include this JavaScript code after your CSS and before the end of the body tag -->
-<script>
-    // Select all cards except the one being hovered
-    const cards = document.querySelectorAll('.card:not(:hover)');
-    
-    // Add the blur-effect class to other cards when hovering over one card
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            cards.forEach(c => {
-                c.classList.add('blur-effect');
-            });
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            cards.forEach(c => {
-                c.classList.remove('blur-effect');
-            });
-        });
-    });
-</script>
 
 @endsection

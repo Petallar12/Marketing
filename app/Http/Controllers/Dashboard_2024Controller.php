@@ -14,21 +14,24 @@ class Dashboard_2024Controller extends Controller
             }
     //NEW LIVES CO //Total Active New Lives
     $newlives_active = Marketing_2024::wherein('leads',['Ad','Organic'])
+    ->where('month', '!=','2023')
         ->count(); 
     $total_headcount = Marketing_2024::where('status','SOLD')->sum('insured_headcount');
     
-    $potential_commission = Marketing_2024::sum('potential_commission');
-    $commission = Marketing_2024::sum('commission');
+    // $potential_commission = Marketing_2024::sum('potential_commission');
+    
     $gross_sale = Marketing_2024::sum('premium_annual');
     $closed = Marketing_2024::
-            where('status','SOLD')
-            ->sum('insured_headcount');
-    // $expenditures
+            where('status','SOLD')->count();
+            // ->sum('insured_headcount');
+
     // $net_income = $expenditures -$commission;
+    $approx_commission = Marketing_2024::sum('commission');
+    $application_for_approval = Marketing_2024::where('status', 'APPLICATION FOR APPROVAL')->count();
 
 
         
     return view('2024.marketing.dashboard',
-    compact('newlives_active','total_headcount','potential_commission','commission', 'gross_sale','closed'));
+    compact('newlives_active','total_headcount', 'gross_sale','closed','application_for_approval','approx_commission'));
     }
 }

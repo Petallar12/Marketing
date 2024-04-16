@@ -27,21 +27,12 @@
                 text: 'Websites with Closed Leads - Based on Headcount'
             },
           
-          //Not clickable data name at the bottom
-            // xAxis: {
-            //     categories: <?php echo json_encode($array) ?>
-            // },
-        //Clickable Data name at the bottom
+   
         xAxis: {
             categories: <?php echo json_encode($array) ?>,
             labels: {
                 useHTML: true, // Enable HTML for the labels
-                formatter: function() {
-                    // Construct the URL for redirection with query parameter
-                    var url = '/2024/dashboard_index/source_index?source_inquiry=' + encodeURIComponent(this.value);
-                    // Return the anchor tag as the label
-                    return '<a href="' + url + '">' + this.value + '</a>';
-                }
+               
             }
         },
 

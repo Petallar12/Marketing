@@ -2,9 +2,11 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <title>Leads Count of 2024</title>
+    <title>Websites with Closed Leads - Based on Headcount 2024</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="{{ asset('css/graphdashboard.css') }}">
+
+    <link  rel="stylesheet" href="{{ asset('css/graphdashboard.css') }}">
+
     <script src="https://code.highcharts.com/highcharts.js"></script>
 </head>
 <body>
@@ -12,8 +14,8 @@
         <div id="container"></div>
     </div>
     <script type="text/javascript">
-        var source = <?php echo json_encode($lead_distribution)?>;
-        var countlead_distribution = source.map(function(obj) {
+        var lead_distribution = <?php echo json_encode($lead_distribution)?>;
+        var countlead_distribution = lead_distribution.map(function(obj) {
             return obj.count;
         });
 
@@ -22,7 +24,7 @@
         type: 'pie'
     },
     title: {
-        text: 'Total Ad and Organic Counts of  Leads'
+        text: 'Total Count of Lead Base on Ad and Organic'
     },
     tooltip: {
         pointFormat: '<span>{series.name}: <b>{point.y}</b> ({point.percentage:.1f}%)</span>'
@@ -52,7 +54,8 @@
             // Add more data points as needed
         ]
     }]
-});
-    </script>
+});    </script>
+
+
 </body>
 </html>

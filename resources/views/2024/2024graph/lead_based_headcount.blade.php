@@ -22,7 +22,7 @@
         type: 'pie'
     },
     title: {
-        text: 'Total Count of Ad and Organic based on Headcounts'
+        text: 'Sold based on Headcounts'
     },
     tooltip: {
         pointFormat: '<span>{series.name}: <b>{point.y}</b> ({point.percentage:.1f}%)</span>'

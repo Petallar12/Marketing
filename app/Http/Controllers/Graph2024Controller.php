@@ -8,65 +8,63 @@ use Illuminate\Support\Facades\DB;
 
 class Graph2024Controller extends Controller
 {
-        //new lives source of inquiry
-        public function lead_distribution()
-        {
+    public function lead_distribution()
+    {
+        // Get count per lead type
+        $lead_distribution = Marketing_2024::select(DB::raw("count(leads) as count"), 'leads')
+        ->groupBy('leads')
+        ->havingRaw('count(leads)  > 0')
+        ->get('count');
 
 
-        $lead_distribution = Marketing_2024::select(DB::raw("COUNT(leads) as count"), 'leads')
-            ->groupBy('leads')
-            ->havingRaw('COUNT(leads) > 0')
-            ->get('count');
-
+        $array = Marketing_2024::select('leads')
+        ->groupBy('leads')
+        //to remove the 0 in y axis
+        ->havingRaw('COUNT(leads) > 0')
+        ->pluck('leads')
+        ->toArray();
     
-            $array = Marketing_2024::select('leads')
-            ->groupBy('leads')
-            //to remove the 0 in y axis
-            ->havingRaw('COUNT(leads) > 0')
-            ->pluck('leads')
-            ->toArray();
-            
-            return view('/2024/2024graph/lead_distribution', compact('lead_distribution','array'));
-        }
-            public function lead_based_headcount()
+        return view('/2024/2024graph/lead_distribution', compact('lead_distribution', 'array'));
+    }
+    
+
+     public function lead_based_headcount()
         {        
-        $lead_based_headcount  = Marketing_2024::select(DB::raw("sum(insured_headcount) as count"), 'insured_headcount')
-            ->where('status','SOLD')
-            ->groupBy('insured_headcount')
-            ->havingRaw('sum(insured_headcount)  > 0')
-            ->get('sum');
+        $lead_based_headcount  = Marketing_2024::select(DB::raw("count(insured_headcount) as count"), 'insured_headcount')
+        ->where('status','SOLD')
+        ->groupBy('insured_headcount')
+        ->havingRaw('count(insured_headcount)  > 0')
+        ->get('count');
 
+
+        $array = Marketing_2024::select('leads')
+        ->where('status','SOLD')
+        ->groupBy('leads')
+        //to remove the 0 in y axis
+        ->havingRaw('COUNT(leads) > 0')
+        ->pluck('leads')
+        ->toArray();
     
-            $array = Marketing_2024::select('leads')
-            ->where('status','SOLD')
-
-            ->groupBy('leads')
-            //to remove the 0 in y axis
-            ->havingRaw('COUNT(leads) > 0')
-            ->pluck('leads')
-            ->toArray();
             
             return view('/2024/2024graph/lead_based_headcount', compact('lead_based_headcount','array'));
         }
         
         public function website_leads_based_headcount()
         {        
-        $website_leads_based_headcount = Marketing_2024::select(DB::raw("sum(insured_headcount) as count"), 'insured_headcount')
-            ->where('status','SOLD')
-            ->groupBy('insured_headcount')
-            ->havingRaw('sum(insured_headcount)  > 0')
-            ->get('sum');
+        $website_leads_based_headcount = Marketing_2024::select(DB::raw("count(source) as count"), 'source')
+        ->where('status','SOLD')
+        ->groupBy('source')
+        ->havingRaw('count(source)  > 0')
+        ->get('count');
 
-    
-            $array = Marketing_2024::select('source')
-            ->where('status','SOLD')
 
-            ->groupBy('source')
-            //to remove the 0 in y axis
-            ->havingRaw('COUNT(source) > 0')
-            ->pluck('source')
-            ->toArray();
-            
+        $array = Marketing_2024::select('source')
+        ->groupBy('source')
+        ->where('status','SOLD')
+        //to remove the 0 in y axis
+        ->havingRaw('COUNT(source) > 0')
+        ->pluck('source')
+        ->toArray();
             return view('/2024/2024graph/website_leads_based_headcount', compact('website_leads_based_headcount','array'));
         }
                 
